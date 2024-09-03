@@ -4,4 +4,4 @@ Pseudophoenix.github.io
 
 [Leetcode](https://leetcode.com/u/pseudophoenix/)
 
-![My Skills](https://skillicons.dev/icons?i=js,html,css,gmail,flask)
+![My Skills](https://skillicons.dev/icons?i=js,html,css,gmail,flask,django,linkedin,opencv,pytorch)
