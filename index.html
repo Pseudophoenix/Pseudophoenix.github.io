@@ -1,13 +1,453 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timeline App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+
+<head>
+    <title>
+    Alok
+    </title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@300&family=Poppins:wght@100&family=Roboto+Slab:wght@300&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Merriweather:wght@300&family=Montserrat:wght@300&family=Poppins:wght@100&family=Rajdhani:wght@600&family=Raleway:wght@300&family=Roboto+Condensed:wght@300;700&family=Roboto+Slab:wght@300&family=Source+Code+Pro:wght@500&display=swap');
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            /* font-family: 'Roboto Slab', serif; */
+        }
+
+        .row1 {
+            font-family:'Rajdhani', sans-serif;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(126deg, #013915, #00481b, #002808);
+            display: block;
+        }
+
+        .list {
+            float: left;
+            height: 20px;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        .head {
+            width: 50%;
+            height: 40px;
+            float: left;
+            font-size: 30px;
+            padding: 10px;
+            font-family: 'Rajdhani', sans-serif;
+            color: rgb(245 248 231);
+            display: block;
+        }
+
+        .head2 {
+            height: 40px;
+            float: left;
+            position: absolute;
+            right: 0px;
+            color: #000000;
+        }
+
+        .row2 {
+            height: 30px;
+            padding: 25px;
+            font-size: 30px;
+            text-align: center;
+            display: block;
+            background: radial-gradient(800px, #002910, #000000);
+            color: rgb(245 248 231);
+            border: 0px solid gray;
+        }
+
+        .row3 {
+            background: linear-gradient(204deg, #003713, #000000, #000802);
+            height: 540px;
+            padding: 40px;
+            font-family: 'Raleway', sans-serif;
+            border: 0px solid gray;
+
+        }
+
+        #row3Image {
+            transition: 1s;
+            float: left;
+            margin-top: 10%;
+            height: 380px;
+        }
+
+        #row3Image:hover {
+            transition: .5s;
+            float: left;
+            filter: blur(2px);
+            margin-top: 10%;
+            height: 380px;
+            transition: .5s;
+        }
+
+        #row3Content {
+            float: left;
+            padding: 50px 2% 50px 2%;
+            height: 100%;
+            width: 46%;
+            text-align: justify;
+            color: rgb(245 248 231);
+            }
+
+        #row3AboutMe {
+            color: rgb(13 121 8);
+            text-align: center;
+            /* font-family: 'Instrument Sans', sans-serif; */
+            font-family: 'Roboto Slab', serif;
+            text-decoration: underline 2px;
+            font-size: 30px;
+        }
+
+        .row4 {
+            height: 417px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        #row4Projects {
+            text-align: center;
+            padding: 18px;
+            font-size: 30px;
+            font-family: 'Roboto Slab', serif;
+            text-decoration: underline;
+        }
+
+        #row4Image {
+            height: 340px;
+            margin: 0px 0px 0px 200px;
+            float: left;
+        }
+
+        #row4Content {
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+        .liProject {
+            padding: 10px;
+        }
+
+        .ulProject {
+            padding: 40px 150px 40px 150px;
+            margin-bottom: 0px;
+        }
+
+        #row5Achievement {
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+            color: rgb(13 121 8);
+            text-decoration: underline dotted rgb(13 121 8);
+            font-family: 'Roboto Slab', serif;
+            width: 100%;
+        }
+
+        .row5 {
+            height: 433.4px;
+            background: linear-gradient(225deg, #003108, #000000, #003108);
+            background-size: 300% 300%;
+            color: rgb(245 248 231);
+            animation: row5back 20s infinite alternate-reverse;
+        }
+
+        @keyframes row5back {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 100% 50%;
+            }
+
+            50% {
+                background-position: 0% 50%;
+            }
+
+            75% {
+                background-position: 100% 50%;
+            }
+
+        }
+
+
+        .ulAchievements {
+            padding: 40px 250px 0px 250px;
+            margin: 0px 0px 0px 0px;
+        }
+
+        .row6 {
+            text-align: center;
+            height: 586.8px;
+            background-color: darkgrey;
+        }
+
+        #row6Contact {
+            text-align: center;
+            padding: 20px;
+            font-family: 'Roboto Slab', serif;
+            font-size: 30px;
+            color: rgb(13 121 8);
+        }
+
+        #row6Form {
+
+            text-align: left;
+            width: 400px;
+            height: 474px;
+            background: linear-gradient(204deg, #005a1f, #000000, #005e17);
+            color: rgb(245 248 231);
+            background-size: 300% 300%;
+            color: rgb(245 248 231);
+            animation: row6back 6s infinite alternate-reverse;
+            float: left;
+        }
+
+        @keyframes row6back {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 100% 50%;
+            }
+
+            50% {
+                background-position: 0% 50%;
+            }
+
+            75% {
+                background-position: 100% 50%;
+            }
+
+        }
+
+        .blank {
+            width: 36%;
+            height: 87%;
+            float: left;
+        }
+
+        .row7 {
+            width: 100%;
+            height: 40px;
+            padding: 0px;
+        }
+
+        .row7Links {
+            float: left;
+            width: 20%;
+            height: 20px;
+            padding: 10px 0px 10px 0px;
+            text-align: center;
+            font-size: 20px;
+            background: linear-gradient(0deg, #003713, #000000, #000802);
+            color: rgb(245 248 231);
+        }
+
+        .row8 {
+            height: 20px;
+            font-size: 20px;
+            width: 70%;
+            padding: 10px 70px 10px 70px;
+            float: left;
+        }
+
+        .row9 {
+            color: aliceblue;
+            background-color: black;
+            width: 17%;
+            height: 20px;
+            padding: 10px;
+            position: absolute;
+            right: 8px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .textbox {
+            width: 73%;
+            height: 30px;
+            position: relative;
+            right: 0px;
+        }
+
+        form {
+            padding: 10px 30px 10px 30px;
+        }
+
+        #name {
+            padding: 5px 7.5px 5px 7.5px;
+            width: 20%;
+            font-size: 15px;
+            float: left;
+        }
+
+        #email {
+            padding: 5px 7.5px 5px 7.5px;
+            width: 20%;
+            font-size: 15px;
+            float: left;
+        }
+
+        #phone {
+            padding: 5px 7.5px 5px 7.5px;
+            width: 20%;
+            font-size: 15px;
+            float: left;
+        }
+
+        #message {
+            padding: 5px 7.5px 5px 7.5px;
+            width: 20%;
+            font-size: 15px;
+            float: left;
+        }
+
+        textarea {
+            width: 100%;
+            height: 184px;
+
+        }
+
+        #textarea {
+            width: 250px;
+            float: left;
+        }
+
+        #submit {
+            width: 200px;
+            margin: 10% 25% 0% 25%;
+            padding: 10px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row1">
+        <div class="head">GeeksForGeeks</div>
+        <div class="head2">
+            <div class="list"><a href>Home</a></div>
+            <div class="list"><a href>About</div>
+            <div class="list"><a href>Contact</a></div>
+        </div>
+    </div>
+    <div class="row2">Hello Everyone!</div>
+    <div class="row3">
+        <div id="row3AboutMe">About Me</div>
+        <div>
+            <img id="row3Image" src="wp10662364-black-and-green-anime-wallpapers.jpg"
+                height="40px">
+            <div id="row3Content">Thanks for your interest, here is a quick story of me and this website.
+                <br>
+                <br>
+                Sandeep Jain An IIT Roorkee alumnus and founder of GeeksforGeeks. He loves to solve programming problems
+                in most efficient ways. Apart from GeeksforGeeks, he has worked with DE Shaw and Co. as a software
+                developer and JIIT Noida as an assistant professor.<br><br>
+                I do my work mainly in C-Language, C++ and JAVA. C++ and Data Structure & Algorithm are my stronger
+                section. Besides these I know Web Development, LINUX and database as well.<br><br>
+                This website is basically one of my Web Development project which is built using HTML only. Here one can
+                also find ideas for projects in different languages. Thanks again for reading this, because of people
+                like you, it exists and prospers!
+                <br><br><b>
+                    Cheers,<br>
+                    GeeksForGeeks.</b>
+            </div>
+        </div>
+    </div>
+    <div class="row4">
+        <div id="row4Projects">Projects</div>
+        <div>
+            <div id="row4Content">
+                <ul class="ulProject" type="square">
+                    <li class="liProject">BMI Calculator<a href>&#x26E4</a></li>
+                    <li class="liProject">Calculator<a href>&#x26E4</a></li>
+                    <li class="liProject">Calendar<a href>&#x26E4</a></li>
+                    <li class="liProject">Contact Saver<a href>&#x26E4</a></li>
+                    <li class="liProject">Daily quiz<a href>&#x26E4</a></li>
+                    <li class="liProject">Employee Record System<a href>&#x26E4</a></li>
+                </ul>
+            </div>
+            <img id="row4Image" src="image (117).jpg">
+        </div>
+    </div>
+    <div class="row5">
+        <div id="row5Achievement">Achievements</div>
+        <div>
+            <ul class="ulAchievements">
+                <li>.
+                    <ul>
+                        <li>December,2020-Present.</li>
+                        <li>Write technical articles on programming relted topics.</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="ulAchievements">
+                <li>General Secretary Technical Board IIIT Manipur.
+                    <ul>
+                        <li>March,2023 - Present.</li>
+                        <li>Organised the Ahouba 24 which consisted of a Hackathon and Programming Competition.</li>
+                    </ul>
+
+            </ul>
+            <ul class="ulAchievements">
+                <li>.</li>
+                <ul>
+                    <li>
+                        September,2024.
+                    </li>
+                    <li>Co-Lead for GDG on Campus IIIT Manipur Chapter 2024.</li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row6">
+        <div id="row6Contact">Contact</div>
+        <div class="blank"></div>
+        <div id="row6Form">
+            <div>
+                <form>
+                    <div id="name">Name:</div><input class="textbox" type="text">
+                </form>
+            </div>
+            <div>
+                <form>
+                    <div id="email">Email:</div><input class="textbox" type="text">
+                </form>
+            </div>
+            <div>
+                <form>
+                    <div id="phone">Phone:</div><input class="textbox" type="text">
+                </form>
+            </div>
+            <div>
+                <form>
+                    <div id="message">Message:</div>
+                    <div id="textarea"><textarea placeholder="Give us a comment"></textarea></div>
+                </form><button id="submit">Submit</button>
+            </div>
+
+        </div>
+        <div class="blank"></div>
+    </div>
+    <div class="row7">
+        <div class="row7Links">LinkedIn<a href="file:///D:/Files/web/html/Portfolio.html">&#x21E8</a></div>
+        <div class="row7Links">Codeforce<a href="file:///D:/Files/web/html/Portfolio.html">&#x21E8</a></div>
+        <div class="row7Links">Leetcode<a href="file:///D:/Files/web/html/Portfolio.html">&#x21E8</a></div>
+        <div class="row7Links">Discord<a href="file:///D:/Files/web/html/Portfolio.html">&#x21E8</a></div>
+        <div class="row7Links">Telegram<a href="file:///D:/Files/web/html/Portfolio.html">&#x21E8</a></div>
+    </div>
+    <div class="row8">&#169 Copyright by Me. All rights reserved</div>
+    <div class="row9">TOP</div>
+</body>
+
 </html>
